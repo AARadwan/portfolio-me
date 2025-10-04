@@ -203,7 +203,6 @@ submitBtn.addEventListener("click", () => {
   ) {
     sendEmail();
   } else {
-    
   }
 });
 
@@ -280,32 +279,32 @@ window.addEventListener("load", function () {
 /*--------------- End Theme Toggle --------------*/
 /*-------------- prevent right click -------------*/
 
-// document.addEventListener("contextmenu", function (e) {
-//   e.preventDefault();
-// });
+document.addEventListener("contextmenu", function (e) {
+  e.preventDefault();
+});
 
-// document.addEventListener(
-//   "keydown",
-//   function (e) {
-//     if (e.code === "F12") e.preventDefault();
+document.addEventListener(
+  "keydown",
+  function (e) {
+    if (e.code === "F12") e.preventDefault();
 
-//     if (
-//       e.ctrlKey &&
-//       e.shiftKey &&
-//       ["KeyI", "KeyJ", "KeyC", "KeyK", "KeyM"].includes(e.code)
-//     ) {
-//       e.preventDefault();
-//     }
+    if (
+      e.ctrlKey &&
+      e.shiftKey &&
+      ["KeyI", "KeyJ", "KeyC", "KeyK", "KeyM"].includes(e.code)
+    ) {
+      e.preventDefault();
+    }
 
-//     if (e.ctrlKey && e.code === "KeyU") {
-//       e.preventDefault();
-//     }
+    if (e.ctrlKey && e.code === "KeyU") {
+      e.preventDefault();
+    }
 
-//     if (e.ctrlKey && e.code === "KeyS") {
-//       e.preventDefault();
-//     }
-//   },
-//   true
-// );
+    if (e.ctrlKey && e.code === "KeyS") {
+      e.preventDefault();
+    }
+  },
+  true
+);
 
 /*-------------- prevent right click -------------*/
