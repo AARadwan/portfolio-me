@@ -519,7 +519,41 @@ section {
   }
 }
 
+@media (min-width: 768px) and (max-width: 998px) {
+  .page-header nav {
+    & .logo {
+      width: 50px;
+    }
+    & .links-menu {
+      gap: 8px !important;
+      font-size: 11px;
+    }
+    & .animated-button {
+      padding: 8px 10px;
+      font-size: 12px;
+    }
+  }
+}
+
 @media (max-width: 767px) {
+  .page-header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .page-header nav .logo {
+    order: 1;
+  }
+
+  .page-header nav .theme-toggle {
+    order: 2;
+    margin: 0 auto;
+  }
+
+  .page-header nav .toggle-btn {
+    order: 3;
+  }
   .toggle-menu {
     background: var(--gradient-color);
     position: fixed;
@@ -895,7 +929,7 @@ main {
 }
 
 .experience-logo {
-  max-width: 160px;
+  max-width: 130px;
   margin-bottom: 15px;
 }
 
@@ -1138,22 +1172,23 @@ main {
   }
 }
 .nav-pills .nav-link {
-  color: #60a5fa;
+  color: var(--main-color-light);
+  background-color: transparent;
+  font-weight: 500;
   border-radius: 8px;
   padding: 8px 20px;
   transition: all 0.3s ease;
 }
 
 .nav-pills .nav-link.active {
-  background: linear-gradient(135deg, #3b82f6, #9333ea);
-  color: #fff;
+  color: var(--white-color);
+  background-color: var(--main-color);
   font-weight: bold;
-  box-shadow: 0 0 15px rgba(59, 130, 246, 0.6);
 }
 
 .nav-pills .nav-link:hover {
-  color: #fff;
-  background: rgba(59, 130, 246, 0.2);
+  color: var(--white-color);
+  background-color: var(--main-color);
 }
 
 /* ====================End Works==================== */
@@ -1353,6 +1388,12 @@ main {
     }
   }
 }
+@media (min-width: 768px) and (max-width: 988px) {
+  .info .email {
+    font-size: 13px;
+  }
+}
+
 /* ====================End Contact==================== */
 
 /* ====================End Main Content==================== */
