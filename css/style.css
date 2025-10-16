@@ -337,8 +337,6 @@ a {
 }
 /*---------- Background animation ----------*/
 section {
-    margin: 0;
-  padding: 0;
   overflow: hidden;
   & .background {
     position: absolute;
@@ -560,12 +558,10 @@ section {
     background: var(--gradient-color);
     position: fixed;
     z-index: 1500;
-    /* top: -100vh; */
-     top: -100dvh;
+    top: -100vh;
     left: 0;
     width: 100%;
-    /* height: calc(100vh - 80px); */
-    height: calc(100dvh - 80px);
+    height: calc(100vh - 80px);
     transition: var(--main-transition);
     -webkit-transition: var(--main-transition);
     -moz-transition: var(--main-transition);
@@ -647,9 +643,7 @@ main {
   position: relative;
 }
 .landing {
-    overflow: hidden;
-  /* height: calc(100vh - 80px); */
-  min-height: calc(100dvh - 80px);
+  height: calc(100vh - 80px);
   margin-top: 80px;
   padding-top: 1.7rem;
   & .social {
@@ -1409,13 +1403,36 @@ main {
   background-color: var(--sec-color);
   backdrop-filter: blur(5px);
   color: var(--skill-title-color);
+      line-height: 1.5;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 /* ====================End Page Footer==================== */
 
+
+.contact .background {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.contact .background span {
+  position: absolute;
+  bottom: 0; 
+}
 
 html, body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  background-color: #000; /* علشان ما يبانش أي شريط أبيض */
+  overflow-y: auto;
+  background-color: #000;
+}
+
+section {
+  position: relative;
+  overflow: hidden; 
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
 }
