@@ -15,17 +15,16 @@ const preloader = document.querySelector(".preloader"),
   userMessageInput = document.getElementById("message");
 
 /*---------- Start Preloader ----------*/
-$("body").css("overflow-y", "hidden");
-$(document).ready(() => {
-  $(".img-container").fadeOut(3000, () => {
-    $(".img-container")
-      .parent()
-      .fadeOut(2500, () => {
-        $(".preloader").remove();
-        $("body").css("overflow-y", "auto");
-      });
-  });
+document.addEventListener("DOMContentLoaded", () => {
+  const preloader = document.querySelector(".preloader");
+  document.body.style.overflowY = "hidden";
+
+  setTimeout(() => {
+    preloader.classList.add("fade-out");
+    document.body.style.overflowY = "auto";
+  }, 800);
 });
+
 /*---------- End Preloader ----------*/
 
 /*---------- Start prevent scroll when open menu ----------*/
