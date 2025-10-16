@@ -14,15 +14,17 @@ const preloader = document.querySelector(".preloader"),
   userPhoneInput = document.getElementById("phone"),
   userMessageInput = document.getElementById("message");
 
-/*---------- Start Preloader ----------*/
-$("body").css("overflow-y", "hidden");
+
+  /*---------- Start Preloader ----------*/
 $(document).ready(() => {
+  $("body").addClass("no-scroll");
+  
   $(".img-container").fadeOut(3000, () => {
     $(".img-container")
       .parent()
       .fadeOut(2500, () => {
         $(".preloader").remove();
-        $("body").css("overflow-y", "auto");
+        $("body").removeClass("no-scroll");
       });
   });
 });
@@ -30,12 +32,38 @@ $(document).ready(() => {
 
 /*---------- Start prevent scroll when open menu ----------*/
 $(document).ready(() => {
-  let isMenuAlreadyOpen = false;
   $(".toggle-btn").on("click", () => {
-    $("body").css("overflow", isMenuAlreadyOpen ? "auto" : "hidden");
-    isMenuAlreadyOpen = !isMenuAlreadyOpen;
+    $("body").toggleClass("no-scroll");
+  });
+  
+  $(".toggle-menu .links a").on("click", () => {
+    $("body").removeClass("no-scroll");
   });
 });
+//=================================================================
+
+/*---------- Start Preloader ----------*/
+// $("body").css("overflow-y", "hidden");
+// $(document).ready(() => {
+//   $(".img-container").fadeOut(3000, () => {
+//     $(".img-container")
+//       .parent()
+//       .fadeOut(2500, () => {
+//         $(".preloader").remove();
+//         $("body").css("overflow-y", "auto");
+//       });
+//   });
+// });
+/*---------- End Preloader ----------*/
+
+/*---------- Start prevent scroll when open menu ----------*/
+// $(document).ready(() => {
+//   let isMenuAlreadyOpen = false;
+//   $(".toggle-btn").on("click", () => {
+//     $("body").css("overflow", isMenuAlreadyOpen ? "auto" : "hidden");
+//     isMenuAlreadyOpen = !isMenuAlreadyOpen;
+//   });
+// });
 
 /*---------- Start Toggle Menu ----------*/
 toggleBtn.addEventListener("click", () => {
@@ -47,6 +75,7 @@ toggleBtn.addEventListener("click", () => {
       class="fa-duotone fa-bars fa-lg"
       style="--fa-primary-opacity: 1; --fa-secondary-opacity: 0.4"
       ></i>`;
+      document.body.classList.remove("no-scroll"); // ← ضيف السطر ده
   }
   linksMenu.forEach((li) => {
     li.addEventListener("click", () => {
@@ -55,6 +84,7 @@ toggleBtn.addEventListener("click", () => {
       style="--fa-primary-opacity: 1; --fa-secondary-opacity: 0.4"
       ></i>`;
       toggleMenu.classList.remove("opened");
+      document.body.classList.remove("no-scroll"); // ← ضيف السطر ده
     });
   });
 });
