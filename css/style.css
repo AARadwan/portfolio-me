@@ -68,12 +68,50 @@
 
 html {
   scroll-behavior: smooth;
+
+
+    width: 100%;
+  overflow-x: hidden; 
+  margin: 0;
+  padding: 0;
 }
 body {
   font-family: "Poppins", sans-serif;
   position: relative;
   background: var(--gradient-color);
+
+
+    width: 100%;
+  overflow-x: hidden; 
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
 }
+
+.container, .container-fluid {
+  max-width: 100%;
+  overflow-x: hidden;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+
+.row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+
+
+
 ul {
   list-style: none;
 }
@@ -1403,36 +1441,6 @@ main {
   background-color: var(--sec-color);
   backdrop-filter: blur(5px);
   color: var(--skill-title-color);
-      line-height: 1.5;
-  margin-bottom: 0;
-  padding-bottom: 0;
 }
 /* ====================End Page Footer==================== */
 
-
-.contact .background {
-  position: absolute;
-  inset: 0;
-  overflow: hidden;
-  z-index: 0;
-}
-
-.contact .background span {
-  position: absolute;
-  bottom: 0; 
-}
-
-html, body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  overflow-y: auto;
-  background-color: #000;
-}
-
-section {
-  position: relative;
-  overflow: hidden; 
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
-}
