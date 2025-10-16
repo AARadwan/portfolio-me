@@ -68,49 +68,12 @@
 
 html {
   scroll-behavior: smooth;
-
-
-    width: 100%;
-  overflow-x: hidden; 
-  margin: 0;
-  padding: 0;
 }
 body {
   font-family: "Poppins", sans-serif;
   position: relative;
   background: var(--gradient-color);
-
-
-    width: 100%;
-  overflow-x: hidden; 
-  margin: 0;
-  padding: 0;
-  min-height: 100vh;
 }
-
-.container, .container-fluid {
-  max-width: 100%;
-  overflow-x: hidden;
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
-
-.row {
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-}
-
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-
-
-
-
 
 ul {
   list-style: none;
@@ -1443,4 +1406,3 @@ main {
   color: var(--skill-title-color);
 }
 /* ====================End Page Footer==================== */
-
