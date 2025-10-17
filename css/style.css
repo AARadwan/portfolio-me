@@ -73,7 +73,6 @@ body {
   font-family: "Poppins", sans-serif;
   position: relative;
   background: var(--gradient-color);
-  height: 100dvh;
 }
 ul {
   list-style: none;
